@@ -2,13 +2,31 @@
     "name": "Movement",
     "maps": [
         {
-            "name": "WASD",
+            "name": "Player",
             "id": "e2bc4caf-1f6a-446f-9cbc-6c3a4f244f43",
             "actions": [
                 {
-                    "name": "Movement Actions",
+                    "name": "Move",
                     "type": "Button",
                     "id": "3ececad3-0918-4493-bfb5-439ce3b69d54",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Look",
+                    "type": "Value",
+                    "id": "078660ad-262d-41ad-bbd6-5f6d85984eed",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Jump",
+                    "type": "Button",
+                    "id": "5ff9c80b-7288-4d1f-af68-e7b8a0de6922",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -23,7 +41,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Movement Actions",
+                    "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -34,7 +52,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Movement Actions",
+                    "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -45,7 +63,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Movement Actions",
+                    "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -56,7 +74,29 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Movement Actions",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fe38b46f-e6a9-41c1-9224-3d60d74e1ef6",
+                    "path": "<Mouse>/delta",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Look",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c4e28b04-c57b-42d0-9139-d38fc8b2627d",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
