@@ -920,9 +920,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa93597e3d6e7d45ac312dc6a3c59d4, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 705623663}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa93597e3d6e7d45ac312dc6a3c59d4, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 705623664}
   m_SourcePrefab: {fileID: 100100000, guid: 7aa93597e3d6e7d45ac312dc6a3c59d4, type: 3}
 --- !u!1 &338142707 stripped
@@ -1775,18 +1772,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aa93597e3d6e7d45ac312dc6a3c59d4, type: 3}
   m_PrefabInstance: {fileID: 337505817}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &705623663
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 705623659}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77da92bfedee66740802603ecb27a03e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!64 &705623664
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2535,9 +2520,8 @@ GameObject:
   - component: {fileID: 1059230911}
   - component: {fileID: 1059230910}
   - component: {fileID: 1059230909}
-  - component: {fileID: 1059230908}
-  - component: {fileID: 1059230907}
   - component: {fileID: 1059230914}
+  - component: {fileID: 1059230915}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -2545,46 +2529,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1059230907
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1059230906}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7822f850c8f42e43994678e72174f49, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mainCam: {fileID: 163956611}
-  interactDistance: 2
-  interactionUI: {fileID: 798506944}
-  interactionText: {fileID: 1699470766}
---- !u!114 &1059230908
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1059230906}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27ab55b31d1a7f249acbdf78493ced28, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerCamera: {fileID: 163956614}
-  mouseSmoothTime: 0.02
-  cursorLock: 1
-  mouseSensitivity: 2.8
-  Speed: 9
-  moveSmoothTime: 0.125
-  gravity: -30
-  groundCheck: {fileID: 1106380635}
-  ground:
-    serializedVersion: 2
-    m_Bits: 9
-  jumpHeight: 6
 --- !u!143 &1059230909
 CharacterController:
   m_ObjectHideFlags: 0
@@ -2730,6 +2674,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &1059230915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1059230906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25a839fa550b05140bffeaa0841a969f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 7
+  groundDrag: 8
+  playerHeight: 2
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 1032
+  orientation: {fileID: 163956614}
 --- !u!1 &1093792072 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9217234437682292332, guid: 26e64b1bb040a9246a57bc333c898118, type: 3}
