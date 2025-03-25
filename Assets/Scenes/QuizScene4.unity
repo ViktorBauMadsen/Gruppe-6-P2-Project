@@ -199,38 +199,38 @@ MonoBehaviour:
   m_GameObject: {fileID: 279418739}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad7c27b57d8dd9a44b06a0bc91c12874, type: 3}
+  m_Script: {fileID: 11500000, guid: 45a85e6c6fac1dd4e920891c83209633, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   QnA:
-  - Questions: What does "ASD" stand for?
+  - Questions: What is "ASD"?
     Answers:
+    - Autism Sensory Disorder
     - Aalborg Studying Department
+    - Autistiv Studying Department
     - Autism Spectrum Disorder
-    - Automatic Social Distancing
-    - Autistic Sensory Disturbance
-    CorrectAnswer: 1
-  - Questions: What is "sensory overload"
+    CorrectAnswer: 3
+  - Questions: What is "Sensory overload"?
     Answers:
-    - Overwhelmed by senses
-    - Not enough sensory input
+    - Overstimulation of the senses
+    - Lack of sensory input
     - Fear of social situations
-    - Prefering quiet spaces
+    - Overstimulation of the muscles
     CorrectAnswer: 0
   - Questions: How many levels of ASD exist?
     Answers:
-    - 4 levels
-    - 2 levels
-    - 5 levels
-    - 3 levels
-    CorrectAnswer: 3
-  - Questions: How do individuals with ASD de-stress?
+    - 5
+    - 3
+    - 4
+    - 2
+    CorrectAnswer: 1
+  - Questions: How do people with ASD typically help de-stress?
     Answers:
-    - Stimming or resting
-    - Ignoring the stress
+    - Screaming
+    - Holding in emotions
     - Watching bright lights
-    - Drinking caffeine
-    CorrectAnswer: 0
+    - Stimming or resting
+    CorrectAnswer: 3
   options:
   - {fileID: 809117284}
   - {fileID: 747384237}
