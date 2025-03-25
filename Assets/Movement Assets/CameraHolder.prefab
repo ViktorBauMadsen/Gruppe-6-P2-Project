@@ -152,7 +152,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sensX: 150
   sensY: 150
-  orientation: {fileID: 0}
+  orientation: {fileID: 6797814206579930211, guid: b61178a67d152694cbb2439bae9e27fa, type: 3}
 --- !u!1 &6058239457435928941
 GameObject:
   m_ObjectHideFlags: 0
@@ -198,4 +198,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 832f145a32e372c4997fb58631d50e7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraPosition: {fileID: 0}
+  cameraPosition: {fileID: 6797814206579930211, guid: b61178a67d152694cbb2439bae9e27fa, type: 3}
