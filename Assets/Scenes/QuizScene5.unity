@@ -941,10 +941,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "ASD is a spectrum, which means people experience it in different ways.
-    We use three levels to describe how much support someone might need. \nLevel
-    1 means they need a little support. Level 2 means they need more support.  \nLevel
-    3 means they need a lot of support."
+  m_text: "Continuing on the topic of sensory overload, one of the most common coping
+    mechanisms for autistic individuals is stimming\u2014a term for self-stimulatory
+    behaviors. Stimming involves repetitive movements, sounds, or actions that can
+    serve as both a distraction and a form of self-soothing. Common examples include
+    hand-flapping, \nrocking, and echolalia (repeating words or phrases)."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
