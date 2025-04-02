@@ -23,11 +23,26 @@ public class Objectivemanager : MonoBehaviour
         if (currentObjective != null)
         {
             objectiveText.text = currentObjective.Description;
+            // Check if the current objective is completed
+            if (currentObjective.IsCompleted)
+
+            {
+                // Set a new objective when the current one is completed
+                SetObjective(new Objective("Unlock the door with the key."));
+            }
         }
     }
 
     public void SetObjective(Objective newObjective)
     {
         currentObjective = newObjective;
+    }
+
+    public void CompleteCurrentObjective()
+    {
+        if (currentObjective != null)
+        {
+            currentObjective.CompleteObjective();
+        }
     }
 }
