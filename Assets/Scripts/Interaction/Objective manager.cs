@@ -1,16 +1,33 @@
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+
 
 public class Objectivemanager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+    public TextMeshProUGUI objectiveText; // Reference to the UI Text component
+    private Objective currentObjective;
+
+    // Start is called before the first frame update
     void Start()
     {
-        
+        // Example of setting an initial objective
+        SetObjective(new Objective("Find the key to unlock the door."));
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        // Update the UI text with the current objective
+        if (currentObjective != null)
+        {
+            objectiveText.text = currentObjective.Description;
+        }
+    }
+
+    public void SetObjective(Objective newObjective)
+    {
+        currentObjective = newObjective;
     }
 }
