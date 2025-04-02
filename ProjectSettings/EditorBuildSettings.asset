@@ -6,8 +6,29 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/Scenes/QuizScene1.unity
+    guid: 63f05b3e94ac6e546a7c5dc7965a7b66
+  - enabled: 1
+    path: Assets/Scenes/QuizScene2.unity
+    guid: f289cc82d95aad548bc6766b865c4e7f
+  - enabled: 1
+    path: Assets/Scenes/QuizScene3.unity
+    guid: 54889d12f688aa7418118deefdf66999
+  - enabled: 1
+    path: Assets/Scenes/QuizScene4.unity
+    guid: d7d7e03789d03284cab120d65db0a8d7
+  - enabled: 1
+    path: Assets/Scenes/QuizScene5.unity
+    guid: c299045e2c3b7fe428d3613df394c98b
+  - enabled: 1
+    path: Assets/Scenes/QuizScene6.unity
+    guid: 98ff8b791d286864a91063f220175302
+  - enabled: 1
+    path: Assets/Scenes/QuizScene7.unity
+    guid: 3ea1793819dd7224d9968462832301e8
+  - enabled: 1
+    path: Assets/Scenes/Prototype.unity
+    guid: 329983fefc7e98d4b8ab29ef0f67d478
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
