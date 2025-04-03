@@ -458,7 +458,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NextButton: {fileID: 990915328}
-  SampleScene: QuizScene7
+  SampleScene: Last Quiz
 --- !u!4 &746619209
 Transform:
   m_ObjectHideFlags: 0
