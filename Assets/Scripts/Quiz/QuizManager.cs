@@ -34,7 +34,7 @@ public class QuizManager : MonoBehaviour
             else
             {
                 Debug.Log("No more questions available.");
-                // Optionally, you can add code here to handle the end of the quiz
+                
             }
         }
     }
