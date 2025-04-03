@@ -12,6 +12,8 @@ public class QuizManager : MonoBehaviour
 
     private void Start()
     {
+        Cursor.visible = true;
+
         if (QnA.Count > 0)
         {
             GenerateQuestion();
