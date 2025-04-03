@@ -199,38 +199,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 279418739}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad7c27b57d8dd9a44b06a0bc91c12874, type: 3}
+  m_Script: {fileID: 11500000, guid: 45a85e6c6fac1dd4e920891c83209633, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   QnA:
-  - Questions: What does "ASD" stand for?
+  - Questions: What is ASD?
     Answers:
+    - Autism Sensory Disorder
     - Aalborg Studying Department
+    - 'Autistic Studying Department '
     - Autism Spectrum Disorder
-    - Automatic Social Distancing
-    - Autistic Sensory Disturbance
-    CorrectAnswer: 1
-  - Questions: What is "sensory overload"
-    Answers:
-    - Overwhelmed by senses
-    - Not enough sensory input
-    - Fear of social situations
-    - Prefering quiet spaces
-    CorrectAnswer: 0
+    CorrectAnswer: 3
   - Questions: How many levels of ASD exist?
     Answers:
-    - 4 levels
-    - 2 levels
-    - 5 levels
-    - 3 levels
-    CorrectAnswer: 3
-  - Questions: How do individuals with ASD de-stress?
-    Answers:
-    - Stimming or resting
-    - Ignoring the stress
-    - Watching bright lights
-    - Drinking caffeine
-    CorrectAnswer: 0
+    - 5
+    - 3
+    - 2
+    - 4
+    CorrectAnswer: 1
   options:
   - {fileID: 809117284}
   - {fileID: 747384237}
