@@ -45,7 +45,7 @@ public class StressValueHolder : MonoBehaviour
 	}
 	private void ProcessingCheck()
 	{
-		ChangePostProcessing.singleton.ChangeParameters(StressMeterValue / 250, StressMeterValue / 60, StressMeterValue / 2);
+		ChangePostProcessing.singleton.ChangeParameters(StressMeterValue / 250, StressMeterValue / 10, StressMeterValue / 2);
 	}
 
 	//private void OnDestroy()
