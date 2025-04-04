@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEditor;
-
+using UnityEngine.SceneManagement;
 
 public class StressValueHolder : MonoBehaviour
 {
@@ -36,7 +36,7 @@ public class StressValueHolder : MonoBehaviour
 		StressMeterValue += stressAddition;
 		UpdateMeterValue();
 	}
-	private void UpdateMeterValue()
+	public void UpdateMeterValue()
 	{
 		StressMeterValue = Mathf.Clamp(StressMeterValue, 0, StressMeterValue_Max); //den tager en tal, den må ikke kommer under "0", den må ikke kommer over SMV_MAX.
 		StressMeterSlider.value = StressMeterValue / StressMeterValue_Max;
@@ -47,4 +47,12 @@ public class StressValueHolder : MonoBehaviour
 	{
 		ChangePostProcessing.singleton.ChangeParameters(StressMeterValue / 250, StressMeterValue / 60, StressMeterValue / 2);
 	}
+
+	//private void OnDestroy()
+	//{
+	//UpdateMeterValue();
+
+	//		if (StressMeterValue = StressMeterValue_Max)
+	//SceneManager.LoadScene("DeathScreen");
+	//}
 }
