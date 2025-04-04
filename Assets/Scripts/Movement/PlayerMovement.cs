@@ -25,25 +25,20 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
-
-        // Set initial rotation of orientation to 90 degrees on the Y-axis
-        if (orientation != null)
-        {
-            orientation.rotation = Quaternion.Euler(0, 90, 0);
-        }
+        
     }
 
     private void Update()
     {
         // ground check
         grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, whatIsGround);
-
+        
         MyInput();
 
         // handle drag
         if (grounded)
             rb.linearDamping = groundDrag;
-        else
+        else 
             rb.linearDamping = 0;
     }
 
@@ -64,4 +59,13 @@ public class PlayerMovement : MonoBehaviour
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
         rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
     }
+
+
+
+
+
+
+
+
 }
+    
