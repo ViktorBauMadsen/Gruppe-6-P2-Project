@@ -37,5 +37,7 @@ public class ChangePostProcessing : MonoBehaviour
 		{
 			bloom.intensity.value = b; // Adjust bloom intensity
 		}
+
+		
 	}
 }
