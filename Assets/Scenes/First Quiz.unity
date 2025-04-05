@@ -254,7 +254,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NextButton: {fileID: 1896393390}
-  SampleScene: Prototype
+  SampleScene: ClockScene
 --- !u!4 &417486271
 Transform:
   m_ObjectHideFlags: 0
