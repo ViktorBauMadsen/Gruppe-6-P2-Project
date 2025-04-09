@@ -20,6 +20,6 @@ public class ColorChanger : MonoBehaviour, IInteractable
     {
         mat.color = new Color(Random.value, Random.value, Random.value);
 
-		StressValueHolder.singleton.RemoveStress(20);
+		StressValueHolder.singleton.RemoveStress(15);
 	}
 }

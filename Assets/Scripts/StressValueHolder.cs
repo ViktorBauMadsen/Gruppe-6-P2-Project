@@ -42,17 +42,20 @@ public class StressValueHolder : MonoBehaviour
 		StressMeterSlider.value = StressMeterValue / StressMeterValue_Max;
 
 		ProcessingCheck();
+
+		DeathCheck();
 	}
 	private void ProcessingCheck()
 	{
 		ChangePostProcessing.singleton.ChangeParameters(StressMeterValue / 250, StressMeterValue / 10, StressMeterValue / 2);
 	}
 
-	//private void OnDestroy()
-	//{
-	//UpdateMeterValue();
 
-	//		if (StressMeterValue = StressMeterValue_Max)
-	//SceneManager.LoadScene("DeathScreen");
-	//}
+	private void DeathCheck()
+	{
+		if (StressMeterValue >= StressMeterValue_Max)
+		{
+			SceneManager.LoadScene("DeathScreen");
+		}
+	}
 }
