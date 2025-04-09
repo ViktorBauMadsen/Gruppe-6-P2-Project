@@ -1,10 +1,9 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 <<<<<<<< HEAD:Assets/Animation.meta
-guid: 0e18aabef65775e4b8b1a012aa6062b2
-=======
 guid: 4e79ca1abb5cc1249b4bf011f02b59ed
->>>>>>> parent of 247e907 (Charlie Merge Classroom update)
+========
+guid: e94ec053f749b534e976efa9b035b48d
+>>>>>>>> Charlie_Test:Assets/Blender/Classroom Final.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
