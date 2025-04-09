@@ -10,16 +10,13 @@ public class AnswerScript : MonoBehaviour
     {
         if(isCorrect)
         {
-			StressValueHolder.singleton.AddStress(10);
-
-			Debug.Log("Correct");
+            Debug.Log("Correct");
             quizManager.Correct();
         }
         else
         {
-			StressValueHolder.singleton.AddStress(30);
-
-			Debug.Log("Wrong");
+            Debug.Log("Wrong");
+          
         }
     }
 

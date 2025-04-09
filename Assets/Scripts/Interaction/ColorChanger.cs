@@ -19,7 +19,5 @@ public class ColorChanger : MonoBehaviour, IInteractable
     public void Interact()
     {
         mat.color = new Color(Random.value, Random.value, Random.value);
-
-		StressValueHolder.singleton.RemoveStress(15);
-	}
+    }
 }

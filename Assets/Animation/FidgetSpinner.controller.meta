@@ -1,12 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 <<<<<<<< HEAD:Assets/Animation/FidgetSpinner.controller.meta
 guid: ecf4804ade4918d43a35b174616a5252
+=======
+guid: 03a4ab5854ddf7541b2d660580caa3a4
+>>>>>>> parent of 247e907 (Charlie Merge Classroom update)
 NativeFormatImporter:
-========
-guid: 99a410243e3374c4b924b74d5fc644b4
-folderAsset: yes
-DefaultImporter:
->>>>>>>> Charlie:Assets/Mannequins.meta
   externalObjects: {}
   mainObjectFileID: 9100000
   userData: 
