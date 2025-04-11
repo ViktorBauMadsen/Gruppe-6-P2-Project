@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using TMPro;
 
 
-public class ObjectiveManager : MonoBehaviour
+public class Objectivemanager : MonoBehaviour
 {
 
     public TextMeshProUGUI objectiveText; // Reference to the UI Text component
@@ -12,11 +12,8 @@ public class ObjectiveManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // Create a new GameObject for the objective
-        GameObject objectiveGO = new GameObject("Objective");
-        Objective objective = objectiveGO.AddComponent<Objective>();
-        objective.Initialize("Reduce your stress level"); // Add an Initialize method to set the description
-        SetObjective(objective);
+        // Example of setting an initial objective
+        SetObjective(new Objective("Find the key to unlock the door."));
     }
 
     // Update is called once per frame
@@ -28,35 +25,17 @@ public class ObjectiveManager : MonoBehaviour
             objectiveText.text = currentObjective.Description;
             // Check if the current objective is completed
             if (currentObjective.IsCompleted)
+
             {
-                // Create a new GameObject for the next objective
-                GameObject objectiveGO = new GameObject("Objective");
-                Objective objective = objectiveGO.AddComponent<Objective>();
-                objective.Initialize("Talk to the teacher.");
-                SetObjective(objective);
+                // Set a new objective when the current one is completed
+                SetObjective(new Objective("Unlock the door with the key."));
             }
-                else if (currentObjective.Description == "Talk to the teacher.")
-                {
-                    // Add any further objectives or end the objective sequence
-                }
         }
     }
 
-
     public void SetObjective(Objective newObjective)
     {
-        if (newObjective == null)
-        {
-            Debug.LogError("Attempted to set a null objective!");
-            return;
-        }
-
         currentObjective = newObjective;
-        if (objectiveText != null)
-        {
-            objectiveText.text = currentObjective.Description; // Update the UI text
-        }
-        Debug.Log("Objective set: " + currentObjective.Description);
     }
 
     public void CompleteCurrentObjective()
@@ -64,11 +43,6 @@ public class ObjectiveManager : MonoBehaviour
         if (currentObjective != null)
         {
             currentObjective.CompleteObjective();
-            Debug.Log("Objective completed: " + currentObjective.Description);
-        }
-        else
-        {
-            Debug.LogError("No current objective to complete!");
         }
     }
 }
