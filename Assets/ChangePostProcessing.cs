@@ -10,7 +10,7 @@ public class ChangePostProcessing : MonoBehaviour
 	private void Awake()
 	{
 		if (singleton != null)
-			Destroy(this);
+			Destroy(gameObject);
 		else
 			singleton = this;
 
