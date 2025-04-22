@@ -2128,7 +2128,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 62525010450376253, guid: 07a921e6c5991024ca4adff3e4381eab, type: 3}
       propertyPath: m_text
-      value: '???:'
+      value: 'Remy:'
       objectReference: {fileID: 0}
     - target: {fileID: 241706658617480702, guid: 07a921e6c5991024ca4adff3e4381eab, type: 3}
       propertyPath: m_Name
@@ -2281,7 +2281,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: hey man! I can help you!
+  m_text: Hey man! I can help you!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
