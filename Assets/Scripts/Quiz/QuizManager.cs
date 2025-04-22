@@ -9,7 +9,6 @@ public class QuizManager : MonoBehaviour
     public GameObject[] options;
     public int currentQuestion;
 
-    private int NextSceneInBuild;
     public TextMeshProUGUI QuestionTxt;
 
     private void Start()
@@ -38,16 +37,10 @@ public class QuizManager : MonoBehaviour
             else
             {
                 Debug.Log("No more questions available.");
-                NextZoggert();
 
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }
         }
-    }
-
-
-    public void NextZoggert()
-    {
-        NextSceneInBuild = SceneManager.GetActiveScene().buildIndex + 1;
     }
 
     void SetAnswers()
