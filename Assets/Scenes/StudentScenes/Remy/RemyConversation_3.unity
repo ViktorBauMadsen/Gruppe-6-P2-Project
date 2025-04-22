@@ -496,7 +496,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 88693848}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d5063374d3d4764da21d4eed040cd9b, type: 3}
+  m_Script: {fileID: 11500000, guid: 0599b0a9052f9f94489789b1d70dca1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &386030183
@@ -1097,7 +1097,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8443582467061685095, guid: a349b979b852d664d9e04be979275a47, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8443582467061685095, guid: a349b979b852d664d9e04be979275a47, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1109,11 +1109,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8443582467061685095, guid: a349b979b852d664d9e04be979275a47, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ChangeScene
+      value: LoadSceneByIndex
       objectReference: {fileID: 0}
     - target: {fileID: 8443582467061685095, guid: a349b979b852d664d9e04be979275a47, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Next, Assembly-CSharp
+      value: BackToPrototype, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8443582467061685095, guid: a349b979b852d664d9e04be979275a47, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName

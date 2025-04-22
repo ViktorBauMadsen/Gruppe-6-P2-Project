@@ -32,10 +32,10 @@ public class ObjectiveManager : MonoBehaviour
                 // Create a new GameObject for the next objective
                 GameObject objectiveGO = new GameObject("Objective");
                 Objective objective = objectiveGO.AddComponent<Objective>();
-                objective.Initialize("Talk to the teacher.");
+                objective.Initialize("Talk to some students and then the teacher.");
                 SetObjective(objective);
             }
-                else if (currentObjective.Description == "Talk to the teacher.")
+                else if (currentObjective.Description == "Talk to some students and then the teacher.")
                 {
                     // Add any further objectives or end the objective sequence
                 }
