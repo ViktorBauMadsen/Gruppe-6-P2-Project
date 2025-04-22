@@ -3,15 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 
-public class NextSceneTeaacher : MonoBehaviour, IInteractable
+public class JodyScript : MonoBehaviour, IInteractable
 {
     public string GetDescription()
     {
-        return "Talk to Teacher";
+        return "Talk to Jody";
     }
 
     public void Interact()
     {
-       SceneManager.LoadScene("QuizScene4");
+       SceneManager.LoadScene("JodyConversation_1");
     }
 }

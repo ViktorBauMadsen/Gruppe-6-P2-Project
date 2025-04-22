@@ -455,7 +455,7 @@ Camera:
   m_CorrespondingSourceObject: {fileID: 5567867054284928434, guid: 9fe498a5b864e3044bc23a25836dea83, type: 3}
   m_PrefabInstance: {fileID: 18460104}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &88693848
+--- !u!1 &117077032
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -463,8 +463,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 88693849}
-  - component: {fileID: 88693850}
+  - component: {fileID: 117077034}
+  - component: {fileID: 117077033}
   m_Layer: 0
   m_Name: Next button script
   m_TagString: Untagged
@@ -472,13 +472,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &88693849
+--- !u!114 &117077033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 117077032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0599b0a9052f9f94489789b1d70dca1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &117077034
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 88693848}
+  m_GameObject: {fileID: 117077032}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 2550.083, y: 96.70929, z: -2010.7997}
@@ -487,18 +499,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &88693850
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 88693848}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d5063374d3d4764da21d4eed040cd9b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &386030183
 GameObject:
   m_ObjectHideFlags: 0
@@ -1097,23 +1097,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8443582467061685095, guid: a349b979b852d664d9e04be979275a47, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8443582467061685095, guid: a349b979b852d664d9e04be979275a47, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 88693850}
+      objectReference: {fileID: 117077033}
     - target: {fileID: 8443582467061685095, guid: a349b979b852d664d9e04be979275a47, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8443582467061685095, guid: a349b979b852d664d9e04be979275a47, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ChangeScene
+      value: LoadSceneByIndex
       objectReference: {fileID: 0}
     - target: {fileID: 8443582467061685095, guid: a349b979b852d664d9e04be979275a47, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Next, Assembly-CSharp
+      value: BackToPrototype, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8443582467061685095, guid: a349b979b852d664d9e04be979275a47, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -1384,7 +1384,7 @@ RectTransform:
   m_GameObject: {fileID: 755546521}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.3, z: 1}
+  m_LocalScale: {x: 1.3, y: 1.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1741246107}
@@ -1415,7 +1415,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2a2fd02444eb04945989754c386b8821, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d2cfd1a83f79f4446969899989799a95, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1915,7 +1915,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 62525010450376253, guid: 07a921e6c5991024ca4adff3e4381eab, type: 3}
       propertyPath: m_text
-      value: 'Jody:'
+      value: 'Lewis:'
       objectReference: {fileID: 0}
     - target: {fileID: 241706658617480702, guid: 07a921e6c5991024ca4adff3e4381eab, type: 3}
       propertyPath: m_Name
@@ -2068,7 +2068,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Pff, go away you little freak!
+  m_text: Bugger off weirdo, can't you see i'm thuggin it?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2349,9 +2349,9 @@ SceneRoots:
   - {fileID: 12409697}
   - {fileID: 527230098}
   - {fileID: 1756276957}
-  - {fileID: 88693849}
   - {fileID: 18460104}
   - {fileID: 1986865621}
   - {fileID: 404710710}
   - {fileID: 1693346793}
   - {fileID: 386030186}
+  - {fileID: 117077034}
