@@ -3298,7 +3298,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1458417959721343349, guid: b61178a67d152694cbb2439bae9e27fa, type: 3}
       propertyPath: jumpForce
-      value: 2
+      value: 7.8
       objectReference: {fileID: 0}
     - target: {fileID: 1458417959721343349, guid: b61178a67d152694cbb2439bae9e27fa, type: 3}
       propertyPath: groundDrag
@@ -3314,7 +3314,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1458417959721343349, guid: b61178a67d152694cbb2439bae9e27fa, type: 3}
       propertyPath: airMultiplier
-      value: 0.3
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 1779212103844129563, guid: b61178a67d152694cbb2439bae9e27fa, type: 3}
       propertyPath: m_Height
