@@ -1,4 +1,4 @@
-using UnityEngine;
+ using UnityEngine;
 using UnityEngine.UI;
 
 public class StressMeter : MonoBehaviour
@@ -6,7 +6,7 @@ public class StressMeter : MonoBehaviour
     // Adjustable settings for stress behavior
     [SerializeField] private float maxStress = 100f;    // Maximum stress limit
     [SerializeField] private float stressIncrease = 20f; // How much stress increases per event
-    [SerializeField] private float stressDecrease = 5f; // How much stress reduces per second
+    [SerializeField] private float stressDecrease = 10f; // How much stress reduces per second
 
     [SerializeField] private Slider stressBar; // Reference to UI Slider
 

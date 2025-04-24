@@ -10,7 +10,7 @@ public class AnswerScript : MonoBehaviour
     {
         if(isCorrect)
         {
-			StressValueHolder.singleton.AddStress(10);
+			StressValueHolder.singleton.AddStress(20);
 
 			Debug.Log("Correct");
             quizManager.Correct();
