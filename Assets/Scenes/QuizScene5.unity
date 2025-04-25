@@ -2440,10 +2440,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "A common coping mechanism against Sensory Overload, for autistic individuals,
-    is stimming. Stimming involves repetitive movements, sounds, or actions that
-    can serve as both a distraction and a form of self-soothing. \n\nCommon examples
-    include hand-flapping, rocking, and echolalia (repeating words or phrases)."
+  m_text: "Coping mechanisms for Sensory Overload, for autistic people, include stimming.
+    Stimming is repetitive movements, sounds, or actions that can serve as both a
+    distraction or a self-soothing. \n\nOther examples include hand-flapping or rocking."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

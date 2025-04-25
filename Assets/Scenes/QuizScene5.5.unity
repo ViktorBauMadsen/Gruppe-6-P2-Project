@@ -2068,12 +2068,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Mi, mi, mi, mi, mi...
+  m_text: '*you innitiate stimming to calm yourself down*
 
-    Sens, sens, sens, sens, sens...
+    Mi, mi, mi, mi, mi...
 
-    Over,
-    over, over, over...'
+    Sens,
+    sens, sens, sens, sens...
+
+    Over, over, over, over...'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

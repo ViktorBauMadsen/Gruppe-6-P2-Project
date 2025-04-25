@@ -1944,9 +1944,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Essentially, ASD is a spectrum, which means people experience it differently.
-    We use three levels to describe how much support someone might need. \nLevel
-    1; They need a little support. \nLevel 2; They need a moderate amount of support. 
-    \nLevel 3; They need a lot of support."
+    Three levels can describe how much support someone might need. \nLevel 1; They
+    need little support. \nLevel 2; They need a moderate amount of support.  \nLevel
+    3; They need a lot of support."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

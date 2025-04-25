@@ -2184,9 +2184,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Alright class! Let's talk about something called \"sensory overload\".
-    Sensory Overload occurs when an individual\u2019s senses are overwhelmed by the
-    environment, which leads to a stressful response....\n"
+  m_text: 'Alright class! Let''s talk about "Sensory Overload". Sensory Overload
+    occurs when the senses are overwhelmed by the environment, which leads to amounts
+    of stress...
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
