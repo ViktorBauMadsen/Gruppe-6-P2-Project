@@ -5,10 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class NextSceneTeaacher : MonoBehaviour, IInteractable
 {
-    
-
-   
-
     public string GetDescription()
     {
         return "Talk to Teacher";
