@@ -24,7 +24,7 @@ public class Dialogue_Assistant : MonoBehaviour
 
         if(TextWriter!=null && messageText != null)
         {
-            TextWriter.AddWriter(messageText, originalText, 0.03f);
+            TextWriter.AddWriter(messageText, originalText, 0.025f);
         }
         
 
