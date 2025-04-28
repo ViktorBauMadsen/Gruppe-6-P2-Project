@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/HomeScreen.unity
     guid: 5937827295ad27c43bbe939dc065ca7c
   - enabled: 1
+    path: Assets/Scenes/ClockScene.unity
+    guid: d7edcfcf763b34f47bc53e873e4a7de5
+  - enabled: 1
     path: Assets/Scenes/QuizScene1.unity
     guid: 63f05b3e94ac6e546a7c5dc7965a7b66
   - enabled: 1
@@ -18,29 +21,101 @@ EditorBuildSettings:
     path: Assets/Scenes/QuizScene3.unity
     guid: 54889d12f688aa7418118deefdf66999
   - enabled: 1
-    path: Assets/Scenes/QuizScene4.unity
-    guid: d7d7e03789d03284cab120d65db0a8d7
+    path: Assets/Scenes/QuizScene3.5.unity
+    guid: ab7c066366c827845822bfa2cb4219f7
   - enabled: 1
-    path: Assets/Scenes/QuizScene5.unity
-    guid: c299045e2c3b7fe428d3613df394c98b
-  - enabled: 1
-    path: Assets/Scenes/QuizScene6.unity
-    guid: 98ff8b791d286864a91063f220175302
-  - enabled: 1
-    path: Assets/Scenes/Last Quiz.unity
-    guid: 3ea1793819dd7224d9968462832301e8
-  - enabled: 1
-    path: Assets/Scenes/Prototype.unity
-    guid: 329983fefc7e98d4b8ab29ef0f67d478
+    path: Assets/Scenes/QuizScene3.6.unity
+    guid: f350b5b34672db84aab4ffab052c0166
   - enabled: 1
     path: Assets/Scenes/First Quiz.unity
     guid: 46b8532a252509e499fd7f12dfca933d
   - enabled: 1
-    path: Assets/Scenes/DeathScreen.unity
-    guid: 1dadf826c1534c24ca254afcced4e1b9
+    path: Assets/Scenes/Prototype.unity
+    guid: 329983fefc7e98d4b8ab29ef0f67d478
   - enabled: 1
-    path: Assets/Scenes/ClockScene.unity
-    guid: d7edcfcf763b34f47bc53e873e4a7de5
+    path: Assets/Scenes/QuizScene4.unity
+    guid: d7d7e03789d03284cab120d65db0a8d7
+  - enabled: 1
+    path: Assets/Scenes/QuizScene4.5.unity
+    guid: 50b721f3b40cefc4088660585ef68f8d
+  - enabled: 1
+    path: Assets/Scenes/QuizScene5.unity
+    guid: c299045e2c3b7fe428d3613df394c98b
+  - enabled: 1
+    path: Assets/Scenes/QuizScene5.5.unity
+    guid: 5276927d0e95f8941b3a42e9e702a341
+  - enabled: 1
+    path: Assets/Scenes/QuizScene6.unity
+    guid: 98ff8b791d286864a91063f220175302
+  - enabled: 1
+    path: Assets/Scenes/QuizScene6.5.unity
+    guid: f35cac5416187c74bad29b44966e31a8
+  - enabled: 1
+    path: Assets/Scenes/Last Quiz.unity
+    guid: 3ea1793819dd7224d9968462832301e8
+  - enabled: 1
+    path: Assets/Scenes/VictoryScreen.unity
+    guid: a76b4ff01edd0ad48ab155a12c930af8
+  - enabled: 1
+    path: Assets/Scenes/DeathScreen.unity
+    guid: f62fba7c154cdcf44a133be84c234e1b
+  - enabled: 1
+    path: Assets/Scenes/StudentScenes/Jody/JodyConversation_1.unity
+    guid: 68921635d938eed44b4343fd5865a1d5
+  - enabled: 1
+    path: Assets/Scenes/StudentScenes/Jody/JodyConversation_2.unity
+    guid: 9f5e60ecf6b2a1f49bba7d23e3706c51
+  - enabled: 1
+    path: Assets/Scenes/StudentScenes/Kate/KateConversation_1.unity
+    guid: 88dc483b3dcfc0947b798c6c6a5baa37
+  - enabled: 1
+    path: Assets/Scenes/StudentScenes/Kate/KateConversation_2.unity
+    guid: 566857f77b9b89846a540b301b6d2671
+  - enabled: 1
+    path: Assets/Scenes/StudentScenes/Kate/KateConversation_3.unity
+    guid: e8ebeb8f3ca6fe04e8e5643d513aa64c
+  - enabled: 1
+    path: Assets/Scenes/StudentScenes/Kate/KateConversation_4.unity
+    guid: 564b13873e6ff684daa74efefe9ad335
+  - enabled: 1
+    path: Assets/Scenes/StudentScenes/Lewis/LewisConversation_1.unity
+    guid: e342b5aa0a8bb2a468885f56f11f77f4
+  - enabled: 1
+    path: Assets/Scenes/StudentScenes/Lewis/LewisConversation_2.unity
+    guid: 14bcf226d6316e64a9b5afcf73056fe3
+  - enabled: 1
+    path: Assets/Scenes/StudentScenes/Lewis/LewisConversation_3.unity
+    guid: bfc6d1ec2e6558d479d9f0de891b797f
+  - enabled: 1
+    path: Assets/Scenes/StudentScenes/Lewis/LewisConversation_4.unity
+    guid: d82c7b0b2df445a489d198a57e39029c
+  - enabled: 1
+    path: Assets/Scenes/StudentScenes/Megan/MeganConversation_1.unity
+    guid: 86920a9000783d349ac150b2ef3e6243
+  - enabled: 1
+    path: Assets/Scenes/StudentScenes/Megan/MeganConversation_2.unity
+    guid: f0d57d23006f6c148b1d0abb298076fd
+  - enabled: 1
+    path: Assets/Scenes/StudentScenes/Megan/MeganConversation_3.unity
+    guid: 0937d5a223378ef498080376745341a3
+  - enabled: 1
+    path: Assets/Scenes/StudentScenes/Remy/RemyConversation_1.unity
+    guid: f085c196923881a47b2b2e7f00059f22
+  - enabled: 1
+    path: Assets/Scenes/StudentScenes/Remy/RemyConversation_2.unity
+    guid: eccb75ce910e0f348a871248b9b13d16
+  - enabled: 1
+    path: Assets/Scenes/StudentScenes/Remy/RemyConversation_3.unity
+    guid: 47502e17de7896e4486e0488d617ad24
+  - enabled: 1
+    path: Assets/Scenes/StudentScenes/Shannon/ShannonConversation_1.unity
+    guid: d7d08c2917d14ca4fa43fcae3319bc97
+  - enabled: 1
+    path: Assets/Scenes/StudentScenes/Shannon/ShannonConversation_2.unity
+    guid: c09e2396091eb544cbe2533d8125139b
+  - enabled: 1
+    path: Assets/Scenes/StudentScenes/Shannon/ShannonConversation_3.unity
+    guid: ff4be20d93d9ae641b65c34c5fc7884a
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
