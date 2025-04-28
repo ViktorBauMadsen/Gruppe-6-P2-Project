@@ -8,6 +8,7 @@ public class TextWriter : MonoBehaviour
     private int characterIndex;
     private float timePerCharacter;
     private float timer;
+    public GameObject TalkingSound;
     public void AddWriter(TextMeshProUGUI uiText, string textToWrite, float timePerCharacter)
     {
         this.uiText = uiText;
@@ -34,9 +35,12 @@ public class TextWriter : MonoBehaviour
                     uiText = null; // Stop writing when the text is fully displayed
                     return;
                 }
+
             }
 
 
         }
+        else { TalkingSound.SetActive(false);}
+        
     }
 }

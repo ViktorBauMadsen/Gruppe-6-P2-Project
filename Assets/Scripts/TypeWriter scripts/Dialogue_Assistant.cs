@@ -5,11 +5,13 @@ public class Dialogue_Assistant : MonoBehaviour
 {
     [SerializeField] private TextWriter TextWriter;
     private TextMeshProUGUI messageText;
+    private AudioSource TalkingAudioSource;
     private void Awake()
     {
         if (messageText == null)
         {
             messageText = transform.Find("message").Find("messageText").GetComponent<TextMeshProUGUI>();
+            
         }
     }
 
@@ -24,6 +26,7 @@ public class Dialogue_Assistant : MonoBehaviour
 
         if(TextWriter!=null && messageText != null)
         {
+           
             TextWriter.AddWriter(messageText, originalText, 0.025f);
         }
         
