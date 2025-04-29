@@ -511,7 +511,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3d630ee391044c63a65cf0531e883d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextSceneName: Prototype
+  nextSceneName: QuizScene1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
