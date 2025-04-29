@@ -345,6 +345,7 @@ GameObject:
   m_Component:
   - component: {fileID: 88693849}
   - component: {fileID: 88693851}
+  - component: {fileID: 88693852}
   m_Layer: 0
   m_Name: Next button script
   m_TagString: Untagged
@@ -377,6 +378,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0599b0a9052f9f94489789b1d70dca1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &88693852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 88693848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65ee9c860a57b4f45a82889dfba0e408, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &101188704
@@ -1022,7 +1035,7 @@ PrefabInstance:
     - target: {fileID: 8443582467061685095, guid: a349b979b852d664d9e04be979275a47, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 88693851}
+      objectReference: {fileID: 88693852}
     - target: {fileID: 8443582467061685095, guid: a349b979b852d664d9e04be979275a47, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -1045,7 +1058,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8443582467061685095, guid: a349b979b852d664d9e04be979275a47, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: BackToPrototype, Assembly-CSharp
+      value: JodyPrototypeScript, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8443582467061685095, guid: a349b979b852d664d9e04be979275a47, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
