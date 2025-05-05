@@ -5,7 +5,7 @@ public class Objective : MonoBehaviour
     public string Description { get; private set; }
     public bool IsCompleted { get; private set; }
 
-    public Objective(string description)
+    public void Initialize(string description)
     {
         Description = description;
         IsCompleted = false;

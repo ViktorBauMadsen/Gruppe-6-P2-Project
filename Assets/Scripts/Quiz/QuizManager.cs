@@ -1,6 +1,9 @@
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class QuizManager : MonoBehaviour
 {
@@ -8,11 +11,14 @@ public class QuizManager : MonoBehaviour
     public GameObject[] options;
     public int currentQuestion;
 
-    public TextMeshProUGUI QuestionTxt;
+    public Image FeedbackColor;
+    public float FlashDuration = 0.2f;
+
+	public TextMeshProUGUI QuestionTxt;
 
     private void Start()
     {
-        Cursor.visible = true;
+		Cursor.visible = true;
 
         if (QnA.Count > 0)
         {
@@ -28,20 +34,34 @@ public class QuizManager : MonoBehaviour
     {
         if (QnA.Count > 0)
         {
-            QnA.RemoveAt(currentQuestion);
+			StartCoroutine(Flash(Color.green));
+
+			QnA.RemoveAt(currentQuestion);
             if (QnA.Count > 0)
             {
-                GenerateQuestion();
-            }
+				GenerateQuestion();
+			}
             else
             {
                 Debug.Log("No more questions available.");
-                
+
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }
         }
     }
+	public void Wrong()
+	{
+		StartCoroutine(Flash(Color.red)); // for wrong answers
+	}
 
-    void SetAnswers()
+	public IEnumerator Flash(Color color)
+	{
+		FeedbackColor.color = new Color(color.r, color.g, color.b, 0.3f); // not-transparent
+		yield return new WaitForSeconds(FlashDuration);
+		FeedbackColor.color = new Color(color.r, color.g, color.b, 0f); // fade back to transparent
+	}
+
+	void SetAnswers()
     {
         Debug.Log("Setting answers for the current question.");
         if (QnA[currentQuestion].Answers.Length != options.Length)
