@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/HomeScreen.unity
     guid: 5937827295ad27c43bbe939dc065ca7c
   - enabled: 1
+    path: Assets/Scenes/ControlsScene.unity
+    guid: d3818759544ad9e459a04b9fdbd2cfd3
+  - enabled: 1
     path: Assets/Scenes/ClockScene.unity
     guid: d7edcfcf763b34f47bc53e873e4a7de5
   - enabled: 1
@@ -116,6 +119,24 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/StudentScenes/Shannon/ShannonConversation_3.unity
     guid: ff4be20d93d9ae641b65c34c5fc7884a
+  - enabled: 1
+    path: Assets/Scenes/StudentScenes/Shannon/ShannonPrototype.unity
+    guid: 9df99a8a0fef97e40b6cc52b1a698698
+  - enabled: 1
+    path: Assets/Scenes/StudentScenes/Remy/RemyPrototype.unity
+    guid: dac308b59fefca44d96ce61cc3eaa1fd
+  - enabled: 1
+    path: Assets/Scenes/StudentScenes/Megan/MeganPrototype.unity
+    guid: 64dcb85d87b474b41819197e198d3ad6
+  - enabled: 1
+    path: Assets/Scenes/StudentScenes/Lewis/LewisPrototype.unity
+    guid: 0d8cee544fb48934b9daea72d435dde1
+  - enabled: 1
+    path: Assets/Scenes/StudentScenes/Kate/KatePrototype.unity
+    guid: 3633946688a6afd47ac3cc55a4033d2f
+  - enabled: 1
+    path: Assets/Scenes/StudentScenes/Jody/JodyPrototype.unity
+    guid: 1e04e464f7d6bd541b47c1a1203bb3b8
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
