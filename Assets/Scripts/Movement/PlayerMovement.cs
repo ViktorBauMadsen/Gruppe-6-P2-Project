@@ -3,95 +3,104 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Movement")]
-    public float moveSpeed;          // How fast the player moves
-    public float groundDrag;         // Drag applied when the player is on the ground
+    public float moveSpeed;          // Player movement speed
+    public float groundDrag;         // Drag applied when grounded
 
     public float jumpForce;          // Force applied when jumping
-    public float jumpCooldown;       // Cooldown time before the player can jump again
-    public float airMultiplier;      // Multiplier for movement control while in air
-    bool readyToJump;                // Whether the player is allowed to jump
+    public float jumpCooldown;       // Time before player can jump again
+    public float airMultiplier;      // Movement multiplier while in air
+    bool readyToJump;                // Controls whether the player can jump
 
     [Header("Keybinds")]
-    public KeyCode jumpKey = KeyCode.Space;  // Key used for jumping
+    public KeyCode jumpKey = KeyCode.Space; // Jump input key
 
     [Header("Ground Check")]
-    public float playerHeight;       // Height used to determine ground distance
-    public LayerMask whatIsGround;   // Layer mask used to detect what counts as ground
-    bool grounded;                   // Whether the player is currently grounded
+    public float playerHeight;       // Height of the player (used for ground check raycast)
+    public LayerMask whatIsGround;   // Layer(s) considered as ground
+    bool grounded;                   // Is the player currently grounded?
 
-    public Transform orientation;    // Reference direction for movement (typically the player’s view or body)
+    public Transform orientation;    // Reference for directional movement (usually the player's facing direction)
 
     float horizontalInput;
     float verticalInput;
 
-    Vector3 moveDirection;           // Direction the player should move
+    Vector3 moveDirection;
 
-    Rigidbody rb;                    // Rigidbody component for physics-based movement
+    Rigidbody rb;
 
     private void Start()
     {
-        rb = GetComponent<Rigidbody>();   // Get the Rigidbody component
-        rb.freezeRotation = true;         // Prevent unwanted rotation due to physics
-        readyToJump = true;               // Player starts ready to jump
+        // Get the Rigidbody component and prevent unwanted rotation from physics
+        rb = GetComponent<Rigidbody>();
+        rb.freezeRotation = true;
+
+        // Allow jumping at the start
+        readyToJump = true;
     }
 
     private void Update()
     {
-        // Check if the player is grounded using a raycast downwards
+        // Check if the player is grounded using a raycast
         grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, whatIsGround);
 
-        MyInput(); // Handle input
+        MyInput();
 
-        // Apply drag if on ground, remove drag if in air
-        if (grounded)
-            rb.linearDamping = groundDrag;
-        else
-            rb.linearDamping = 0;
+        // Apply ground drag if grounded; else set to 0 for free movement in air
+        rb.linearDamping = grounded ? groundDrag : 0f;
     }
 
     private void FixedUpdate()
     {
-        MovePlayer(); // Handle movement using physics
+        // Handle movement using physics
+        MovePlayer();
     }
 
     private void MyInput()
     {
-        // Get movement input from keyboard
+        // Get WASD or arrow key input
         horizontalInput = Input.GetAxisRaw("Horizontal");
         verticalInput = Input.GetAxisRaw("Vertical");
 
-        // Handle jumping
+        // Check for jump input
         if (Input.GetKey(jumpKey) && readyToJump && grounded)
         {
             readyToJump = false;
-            Jump(); // Perform the jump
-            Invoke(nameof(ResetJump), jumpCooldown); // Allow jumping again after cooldown
+
+            Jump();
+
+            // Reset jump after cooldown time
+            Invoke(nameof(ResetJump), jumpCooldown);
         }
     }
 
     private void MovePlayer()
     {
-        // Calculate movement direction relative to orientation
+        // Calculate movement direction relative to player orientation
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
 
         // Apply force based on whether grounded or in air
         if (grounded)
+        {
             rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
+        }
         else
+        {
             rb.AddForce(moveDirection.normalized * moveSpeed * 10f * airMultiplier, ForceMode.Force);
+        }
     }
 
     private void Jump()
     {
-        // Reset vertical velocity before jumping to prevent stacking jump force
+        // Reset vertical velocity before jump for consistent height
         rb.linearVelocity = new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z);
 
-        // Add upward force to jump
+        // Apply an upward impulse force to jump
         rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
     }
 
     private void ResetJump()
     {
-        readyToJump = true; // Allow jumping again
+        // Re-enable jumping after cooldown
+        readyToJump = true;
     }
 }

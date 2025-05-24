@@ -4,38 +4,44 @@ using UnityEngine;
 
 public class PlayerCam : MonoBehaviour
 {
-    public float sensX; // Mouse sensitivity on the X axis (horizontal)
-    public float sensY; // Mouse sensitivity on the Y axis (vertical)
+    // Sensitivity values for mouse movement along X and Y axes.
+    public float sensX;
+    public float sensY;
 
-    public Transform orientation; // Reference to the player's orientation transform (typically controls movement direction)
+    // Reference to the orientation object (usually the player body) for horizontal rotation.
+    public Transform orientation;
 
-    float xRotation; // Tracks the current vertical camera rotation
-    float yRotation; // Tracks the current horizontal camera rotation
+    // Internal variables to store current rotation values.
+    float xRotation;
+    float yRotation;
 
     private void Start()
     {
-        // Lock and hide the cursor to keep it centered and invisible during gameplay
+        // Locks the cursor to the center of the screen and makes it invisible.
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
 
     private void Update()
     {
-        // Get raw mouse input and scale it by sensitivity and delta time for consistent movement
-        float mouseX = Input.GetAxisRaw("Mouse X") * Time.fixedDeltaTime * sensX;
-        float mouseY = Input.GetAxisRaw("Mouse Y") * Time.fixedDeltaTime * sensY;
+        // Get raw mouse input and scale it with sensitivity and frame time.
+        // NOTE: Use Time.deltaTime in Update (not fixedDeltaTime).
+        float mouseX = Input.GetAxisRaw("Mouse X") * Time.deltaTime * sensX;
+        float mouseY = Input.GetAxisRaw("Mouse Y") * Time.deltaTime * sensY;
 
-        // Adjust horizontal rotation based on mouse X movement
+        // Accumulate horizontal rotation (yaw).
         yRotation += mouseX;
 
-        // Adjust vertical rotation based on mouse Y movement (inverted for natural feel)
+        // Accumulate vertical rotation (pitch), inverted so that moving mouse up looks up.
         xRotation -= mouseY;
-        // Clamp vertical rotation so the player can't over-rotate the camera (look too far up/down)
+
+        // Clamp the vertical rotation to avoid flipping the camera over.
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
 
-        // Apply rotation to the camera (x for up/down, y for left/right)
+        // Apply rotation to the camera (pitch and yaw).
         transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
-        // Apply only horizontal rotation to the player's orientation (used for movement direction)
+
+        // Only apply yaw (horizontal rotation) to the orientation object.
         orientation.rotation = Quaternion.Euler(0, yRotation, 0);
     }
 }
