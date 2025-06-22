@@ -6,61 +6,61 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/HomeScreen.unity
+    path: Assets/Scenes/Main Scene/HomeScreen.unity
     guid: 5937827295ad27c43bbe939dc065ca7c
   - enabled: 1
-    path: Assets/Scenes/ControlsScene.unity
+    path: Assets/Scenes/Main Scene/ControlsScene.unity
     guid: d3818759544ad9e459a04b9fdbd2cfd3
   - enabled: 1
-    path: Assets/Scenes/ClockScene.unity
+    path: Assets/Scenes/Cutscene/ClockScene.unity
     guid: d7edcfcf763b34f47bc53e873e4a7de5
   - enabled: 1
-    path: Assets/Scenes/QuizScene1.unity
+    path: Assets/Scenes/Quiz Scenes/QuizScene1.unity
     guid: 63f05b3e94ac6e546a7c5dc7965a7b66
   - enabled: 1
-    path: Assets/Scenes/QuizScene2.unity
+    path: Assets/Scenes/Quiz Scenes/QuizScene2.unity
     guid: f289cc82d95aad548bc6766b865c4e7f
   - enabled: 1
-    path: Assets/Scenes/QuizScene3.unity
+    path: Assets/Scenes/Quiz Scenes/QuizScene3.unity
     guid: 54889d12f688aa7418118deefdf66999
   - enabled: 1
-    path: Assets/Scenes/QuizScene3.5.unity
+    path: Assets/Scenes/Quiz Scenes/QuizScene3.5.unity
     guid: ab7c066366c827845822bfa2cb4219f7
   - enabled: 1
-    path: Assets/Scenes/QuizScene3.6.unity
+    path: Assets/Scenes/Quiz Scenes/QuizScene3.6.unity
     guid: f350b5b34672db84aab4ffab052c0166
   - enabled: 1
-    path: Assets/Scenes/First Quiz.unity
+    path: Assets/Scenes/Quiz Scenes/First Quiz.unity
     guid: 46b8532a252509e499fd7f12dfca933d
   - enabled: 1
-    path: Assets/Scenes/Prototype.unity
+    path: Assets/Scenes/Main Scene/Prototype.unity
     guid: 329983fefc7e98d4b8ab29ef0f67d478
   - enabled: 1
-    path: Assets/Scenes/QuizScene4.unity
+    path: Assets/Scenes/Quiz Scenes/QuizScene4.unity
     guid: d7d7e03789d03284cab120d65db0a8d7
   - enabled: 1
-    path: Assets/Scenes/QuizScene4.5.unity
+    path: Assets/Scenes/Quiz Scenes/QuizScene4.5.unity
     guid: 50b721f3b40cefc4088660585ef68f8d
   - enabled: 1
-    path: Assets/Scenes/QuizScene5.unity
+    path: Assets/Scenes/Quiz Scenes/QuizScene5.unity
     guid: c299045e2c3b7fe428d3613df394c98b
   - enabled: 1
-    path: Assets/Scenes/QuizScene5.5.unity
+    path: Assets/Scenes/Quiz Scenes/QuizScene5.5.unity
     guid: 5276927d0e95f8941b3a42e9e702a341
   - enabled: 1
-    path: Assets/Scenes/QuizScene6.unity
+    path: Assets/Scenes/Quiz Scenes/QuizScene6.unity
     guid: 98ff8b791d286864a91063f220175302
   - enabled: 1
-    path: Assets/Scenes/QuizScene6.5.unity
+    path: Assets/Scenes/Quiz Scenes/QuizScene6.5.unity
     guid: f35cac5416187c74bad29b44966e31a8
   - enabled: 1
-    path: Assets/Scenes/Last Quiz.unity
+    path: Assets/Scenes/Quiz Scenes/Last Quiz.unity
     guid: 3ea1793819dd7224d9968462832301e8
   - enabled: 1
-    path: Assets/Scenes/VictoryScreen.unity
+    path: Assets/Scenes/Main Scene/VictoryScreen.unity
     guid: a76b4ff01edd0ad48ab155a12c930af8
   - enabled: 1
-    path: Assets/Scenes/DeathScreen.unity
+    path: Assets/Scenes/Main Scene/DeathScreen.unity
     guid: f62fba7c154cdcf44a133be84c234e1b
   - enabled: 1
     path: Assets/Scenes/StudentScenes/Jody/JodyConversation_1.unity

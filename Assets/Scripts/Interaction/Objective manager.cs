@@ -1,100 +1,99 @@
-using UnityEngine;
-using UnityEngine.UI;
-using TMPro;
+using UnityEngine; // Provides access to Unity's core engine features
+using UnityEngine.UI; // Provides access to UI components
+using TMPro; // Provides access to TextMeshPro for advanced text rendering
 
-
-// This class manages objectives in the game, including their creation, updating, and completion
+// Manages the player's objectives, updates the UI, and handles objective progression
 public class ObjectiveManager : MonoBehaviour
 {
-    public TextMeshProUGUI objectiveText; // Reference to the TextMeshProUGUI component to display the objective text in the UI
-    private Objective currentObjective; // Holds the current active objective
+    public TextMeshProUGUI objectiveText; // Reference to the UI text element that displays the current objective
+    private Objective currentObjective; // Stores the currently active objective
 
-    // Start is called before the first frame update
+    // Called by Unity when the scene starts
     void Start()
     {
-        // Create a new GameObject to represent the first objective
+        // Create a new GameObject to hold the first objective
         GameObject objectiveGO = new GameObject("Objective");
 
-        // Add the Objective component to the newly created GameObject
+        // Attach an Objective component to the new GameObject
         Objective objective = objectiveGO.AddComponent<Objective>();
 
-        // Initialize the objective with a description
+        // Set the description for the first objective
         objective.Initialize("Reduce your stress level");
 
-        // Set the newly created objective as the current objective
+        // Make this the current objective and update the UI
         SetObjective(objective);
     }
 
-    // Update is called once per frame
+    // Called by Unity every frame
     void Update()
     {
-        // Check if there is a current objective
+        // Only proceed if there is an active objective
         if (currentObjective != null)
         {
-            // Update the UI text to display the current objective's description
+            // Always update the UI text to match the current objective's description
             objectiveText.text = currentObjective.Description;
 
-            // Check if the current objective has been completed
+            // If the current objective is marked as completed
             if (currentObjective.IsCompleted)
             {
                 // Create a new GameObject for the next objective
                 GameObject objectiveGO = new GameObject("Objective");
 
-                // Add the Objective component to the new GameObject
+                // Attach a new Objective component to it
                 Objective objective = objectiveGO.AddComponent<Objective>();
 
-                // Initialize the next objective with a new description
+                // Set the description for the next objective
                 objective.Initialize("Talk to some students and then the teacher.");
 
-                // Set the new objective as the current objective
+                // Make this the new current objective and update the UI
                 SetObjective(objective);
             }
+            // If the current objective is the last one in the sequence, you can add more logic here
             else if (currentObjective.Description == "Talk to some students and then the teacher.")
             {
-                // Placeholder for adding further objectives or ending the objective sequence
+                // Placeholder for future objectives or ending the sequence
             }
         }
     }
 
-    // Sets the current objective to a new objective
+    // Sets the current objective and updates the UI
     public void SetObjective(Objective newObjective)
     {
-        // Check if the new objective is null
+        // Prevent setting a null objective, which would break the logic
         if (newObjective == null)
         {
-            // Log an error if a null objective is passed
             Debug.LogError("Attempted to set a null objective!");
-            return; // Exit the method to prevent further execution
+            return;
         }
 
-        // Assign the new objective to the currentObjective variable
+        // Store the new objective as the current one
         currentObjective = newObjective;
 
-        // Update the UI text if the objectiveText reference is not null
+        // Update the UI text if the reference is set
         if (objectiveText != null)
         {
-            objectiveText.text = currentObjective.Description; // Display the new objective's description
+            objectiveText.text = currentObjective.Description;
         }
 
-        // Log the new objective's description for debugging purposes
+        // Log the new objective for debugging purposes
         Debug.Log("Objective set: " + currentObjective.Description);
     }
 
-    // Marks the current objective as completed
+    // Marks the current objective as completed, if one exists
     public void CompleteCurrentObjective()
     {
-        // Check if there is a current objective
+        // Only complete if there is an active objective
         if (currentObjective != null)
         {
-            // Mark the current objective as completed
+            // Call the method to mark the objective as completed
             currentObjective.CompleteObjective();
 
-            // Log the completion of the current objective
+            // Log the completion for debugging
             Debug.Log("Objective completed: " + currentObjective.Description);
         }
         else
         {
-            // Log an error if there is no current objective to complete
+            // Warn if there is no objective to complete
             Debug.LogError("No current objective to complete!");
         }
     }
