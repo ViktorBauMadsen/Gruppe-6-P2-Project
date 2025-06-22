@@ -2,46 +2,36 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Controls the player's camera rotation based on mouse movement.
 public class PlayerCam : MonoBehaviour
 {
-    // Sensitivity values for mouse movement along X and Y axes.
-    public float sensX;
-    public float sensY;
+    public float sensX; // Mouse sensitivity for horizontal (X axis) movement
+    public float sensY; // Mouse sensitivity for vertical (Y axis) movement
 
-    // Reference to the orientation object (usually the player body) for horizontal rotation.
-    public Transform orientation;
+    public Transform orientation; // Reference to the player's orientation (usually the player body) for yaw rotation
 
-    // Internal variables to store current rotation values.
-    float xRotation;
-    float yRotation;
+    float xRotation; // Stores the current vertical rotation (pitch)
+    float yRotation; // Stores the current horizontal rotation (yaw)
 
     private void Start()
     {
-        // Locks the cursor to the center of the screen and makes it invisible.
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked; // Lock the cursor to the center of the screen
+        Cursor.visible = false; // Hide the cursor from view
     }
 
     private void Update()
     {
-        // Get raw mouse input and scale it with sensitivity and frame time.
-        // NOTE: Use Time.deltaTime in Update (not fixedDeltaTime).
-        float mouseX = Input.GetAxisRaw("Mouse X") * Time.deltaTime * sensX;
-        float mouseY = Input.GetAxisRaw("Mouse Y") * Time.deltaTime * sensY;
+        // Get raw mouse input for X (horizontal) and Y (vertical) axes
+        float mouseX = Input.GetAxisRaw("Mouse X") * Time.deltaTime * sensX; // Horizontal mouse movement, scaled by sensitivity and frame time
+        float mouseY = Input.GetAxisRaw("Mouse Y") * Time.deltaTime * sensY; // Vertical mouse movement, scaled by sensitivity and frame time
 
-        // Accumulate horizontal rotation (yaw).
-        yRotation += mouseX;
+        yRotation += mouseX; // Add horizontal mouse movement to yaw (left/right)
+        xRotation -= mouseY; // Subtract vertical mouse movement from pitch (up/down), inverting so up is up
 
-        // Accumulate vertical rotation (pitch), inverted so that moving mouse up looks up.
-        xRotation -= mouseY;
+        xRotation = Mathf.Clamp(xRotation, -90f, 90f); // Clamp pitch to prevent the camera from flipping over
 
-        // Clamp the vertical rotation to avoid flipping the camera over.
-        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+        transform.rotation = Quaternion.Euler(xRotation, yRotation, 0); // Apply pitch and yaw to the camera's rotation
 
-        // Apply rotation to the camera (pitch and yaw).
-        transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
-
-        // Only apply yaw (horizontal rotation) to the orientation object.
-        orientation.rotation = Quaternion.Euler(0, yRotation, 0);
+        orientation.rotation = Quaternion.Euler(0, yRotation, 0); // Apply only yaw to the orientation (player body), so the player turns left/right
     }
 }

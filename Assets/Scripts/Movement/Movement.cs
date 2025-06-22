@@ -24,7 +24,7 @@ public class Movement : MonoBehaviour
     float velocityY;                 // Vertical velocity (used for jumping/falling)
     bool isGrounded;                 // Whether the player is currently grounded
 
-    float cameraCap;                 // Vertical camera rotation clamping value
+    float cameraCap;                 // Vertical camera rotation clamping value (prevents over-rotation)
     Vector2 currentMouseDelta;       // Current smoothed mouse input
     Vector2 currentMouseDeltaVelocity; // Velocity for smoothing mouse input
 
@@ -34,73 +34,76 @@ public class Movement : MonoBehaviour
     Vector2 currentDirVelocity;      // Velocity for movement smoothing
     Vector3 velocity;                // Final movement vector
 
+    // Called once at the start of the game
     void Start()
     {
-        controller = GetComponent<CharacterController>();
+        controller = GetComponent<CharacterController>(); // Get the CharacterController component attached to this GameObject
 
         // Lock and optionally hide the cursor if enabled
         if (cursorLock)
         {
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;  // Usually you hide the cursor when locking it
+            Cursor.lockState = CursorLockMode.Locked; // Lock the cursor to the center of the screen
+            Cursor.visible = false;  // Hide the cursor
         }
     }
 
+    // Called once per frame by Unity
     void Update()
     {
-        UpdateMouse();  // Handle camera rotation
-        UpdateMove();   // Handle player movement
+        UpdateMouse();  // Handle camera rotation based on mouse movement
+        UpdateMove();   // Handle player movement and jumping
     }
 
+    // Handles mouse input and rotates the camera/player accordingly
     void UpdateMouse()
     {
-        // Get raw mouse input
+        // Get raw mouse input (X = left/right, Y = up/down)
         Vector2 targetMouseDelta = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
 
-        // Smooth the mouse movement
+        // Smooth the mouse movement for a less jittery experience
         currentMouseDelta = Vector2.SmoothDamp(currentMouseDelta, targetMouseDelta, ref currentMouseDeltaVelocity, mouseSmoothTime);
 
-        // Apply vertical rotation with clamping
+        // Adjust vertical camera rotation (pitch), clamped to prevent flipping
         cameraCap -= currentMouseDelta.y * mouseSensitivity;
         cameraCap = Mathf.Clamp(cameraCap, -90.0f, 90.0f);
 
-        // Rotate camera up/down (pitch)
+        // Apply vertical rotation to the camera (look up/down)
         playerCamera.localEulerAngles = Vector3.right * cameraCap;
 
-        // Rotate player left/right (yaw)
+        // Apply horizontal rotation to the player (turn left/right)
         transform.Rotate(Vector3.up * currentMouseDelta.x * mouseSensitivity);
     }
 
+    // Handles player movement, jumping, and gravity
     void UpdateMove()
     {
-        // Check if the player is on the ground using a small sphere cast
+        // Check if the player is on the ground using a small sphere at the groundCheck position
         isGrounded = Physics.CheckSphere(groundCheck.position, 0.2f, ground);
 
-        // Get movement input (WASD or arrow keys)
+        // Get movement input from keyboard (WASD or arrow keys)
         Vector2 targetDir = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        targetDir.Normalize();  // Ensure consistent speed in all directions
+        targetDir.Normalize();  // Normalize to ensure consistent speed in all directions
 
-        // Smooth the movement direction
+        // Smooth the movement direction for more natural acceleration/deceleration
         currentDir = Vector2.SmoothDamp(currentDir, targetDir, ref currentDirVelocity, moveSmoothTime);
 
-        // Apply gravity over time
+        // Apply gravity to the vertical velocity
         velocityY += gravity * 2f * Time.deltaTime;
 
-        // Calculate final velocity vector
+        // Calculate the final movement vector (forward/backward, left/right, and up/down)
         Vector3 velocity = (transform.forward * currentDir.y + transform.right * currentDir.x) * Speed
                          + Vector3.up * velocityY;
 
-        // Move the character
+        // Move the character using the CharacterController
         controller.Move(velocity * Time.deltaTime);
 
-        // Handle jumping
+        // Handle jumping: if grounded and jump button pressed, set upward velocity
         if (isGrounded && Input.GetButtonDown("Jump"))
         {
-            // Apply upward force to jump
-            velocityY = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            velocityY = Mathf.Sqrt(jumpHeight * -2f * gravity); // Calculate jump velocity using physics formula
         }
 
-        // Reset vertical velocity when falling
+        // If falling and not grounded, limit downward velocity for better control
         if (!isGrounded && controller.velocity.y < -1f)
         {
             velocityY = -8f;
